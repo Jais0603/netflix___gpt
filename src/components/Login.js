@@ -24,7 +24,8 @@ const Login = () => {
         createUserWithEmailAndPassword(
         auth,
         email.current.value, 
-        password.current.value)
+        password.current.value
+        )
   .then((userCredential) => {
     const user = userCredential.user;
     console.log(user)
@@ -41,7 +42,8 @@ else{
   signInWithEmailAndPassword(
     auth,
     email.current.value, 
-    password.current.value)
+    password.current.value
+    )
     .then((userCredential) => {
      
       const user = userCredential.user;
