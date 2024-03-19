@@ -3,13 +3,12 @@ import Header from './Header';
 import { checkValidData } from '../Utils/Validate';
 import {signInWithEmailAndPassword,createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import {auth} from "../Utils/firebase";
-import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage ] =useState(null);
-  const navigate = useNavigate();
+
 
   
   const Username =useRef(null);
@@ -36,7 +35,6 @@ const Login = () => {
       photoURL: "https://example.com/jane-q-user/profile.jpg"
     })
     .then(() => {
-     navigate("/browse");
     }).catch((error) => {
         setErrorMessage(error.message);
     });
@@ -59,7 +57,6 @@ else{
      
       const user = userCredential.user;
       console.log(user);
-      navigate("/browse");
   
     })
     .catch((error) => {
