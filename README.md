@@ -16,6 +16,7 @@
 - Created Redux store with UserSlice
 - Implemented sign out
 - update profile
+- Unsubscribe to the onAuthStateChanged callback
 - Fetch from TMDB Movies
 
 
