@@ -18,7 +18,8 @@
 - update profile
 - Unsubscribe to the onAuthStateChanged callback
 - Fetch from TMDB Movies
-
+- Add hardcoded values to the constant file
+- 
 
 # Features
 
