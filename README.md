@@ -19,7 +19,8 @@
 - Unsubscribe to the onAuthStateChanged callback
 - Fetch from TMDB Movies
 - Add hardcoded values to the constant file
-- 
+- register TMDB APT & create an app & got access token
+- get data from TBDM now playing movies list API
 
 # Features
 

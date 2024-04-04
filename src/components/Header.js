@@ -14,10 +14,7 @@ const Header = () => {
   
   const handleSignOut =() =>{
     signOut(auth)
-    .then(() => {
-
-      navigate("/")
-    })
+    .then(() => {})
     .catch((error) => {
       navigate("/error");
     });
@@ -25,7 +22,6 @@ const Header = () => {
   useEffect(() =>{
   const unsubscribe =  onAuthStateChanged(auth, (user) => {
       if (user) {
-        
         const {uid, email, displayName, photoURL} = user.uid;
         dispatch(addUser({
           uid: uid,
@@ -34,7 +30,7 @@ const Header = () => {
           photoURL: photoURL
         })
         );
-        navigate  ("/browse")
+        navigate  ("/browse");
         
       } else {
         dispatch(removeUser());
@@ -42,7 +38,7 @@ const Header = () => {
       }
     });
     return () =>  unsubscribe();     // unsubscribe wh en component unmounts
-  })
+  },[])
   return (
     <div className='absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between'>
       <img className='w-44'
