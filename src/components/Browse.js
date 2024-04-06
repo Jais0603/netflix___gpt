@@ -1,11 +1,10 @@
-import React, { useEffect } from 'react'
+
 import Header from './Header'
-import { API_OPTIONS } from '../Utils/constant';
-import { useDispatch } from 'react-redux';
-import { addNowPlayingMovies } from '../Utils/movieSlice';
+import useNowPlayingMovies from '../Hooks/useNowPlayingMovies';
 
 const Browse = () => {
-
+  
+  useNowPlayingMovies();
   return (
     <div>
         
